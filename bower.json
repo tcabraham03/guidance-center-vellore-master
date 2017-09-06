@@ -1,0 +1,17 @@
+{
+  "name": "Guidance_Center",
+  "homepage": "https://github.com/try-git/try_git",
+  "authors": [
+    "Toni Christo Abraham"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

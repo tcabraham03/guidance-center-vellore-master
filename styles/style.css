@@ -1,0 +1,37 @@
+*{
+	
+}
+.soft-crust{
+	background: #3498DB;
+}
+
+.blue-sky-shy-text{
+	color: #94D0E7;
+}
+
+.custom-header{
+	font-size: 36px;
+}
+
+.custom-sub-header{
+	font-size: 20px;
+}
+
+.liz-orange-text{
+	color: #FF6530;
+}
+
+.liz-orange{
+	background: #ff6530 !important;
+}
+
+.brand-logo img{
+	width: 100px; 
+}
+
+.custom-badge{
+	color: #fff;
+	padding: 5px;
+	border-radius: 30px 30px 30px 30px;
+	margin-left: 10px;
+}
