@@ -29,5 +29,41 @@
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
 </nav>
+<br/><br/><br/>
+<div class="container">
+    <div class="card col s12">
+        <div class="card-content">
+            <div class="card-title">
+                Privilege Card Holders
+            </div>
+            <div class="center row">
+                Enter your privilege card id:
+                <br/>
+                    <div class="input-field col s6 push-s3 left-align">
+                        <form id="privilege_form">
+                            <input placeholder="Id No:" name="privilege_id" id="privilege_id" type="number" class="validate">
+                            <input type="submit"/>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/materialize/dist/js/materialize.js"></script>
+<script>
+    $('#privilege_form').submit(function (e) {
+        e.preventDefault()
+        $.ajax({
+            url:'privilege.php?id='+$('#privilege_id').val(),
+            success:function (data) {
+                console.log(data)
+            },
+            error:function (error) {
+                console.error(error)
+            }
+        })
+    })
+</script>
 </body>
 </html>
