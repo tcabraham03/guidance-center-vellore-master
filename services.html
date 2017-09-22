@@ -9,8 +9,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="bower_components/materialize/dist/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="styles/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
 </head>
 <body>
 <nav class="soft-crust" role="navigation">
@@ -19,9 +17,9 @@
             <!-- <li><a class="waves-effect waves-light btn modal-trigger liz-orange" href="#about">About us</a></li> -->
             <li><a class="waves-effect waves-light" href="index.html">Home</a> </li>
             <li><a class="waves-effect waves-light" href="about.html">About Us</a> </li>
-            <li><a class="waves-effect waves-light active">Gallery</a> </li>
-            <li><a class="waves-effect waves-light">Services</a> </li>
-            <li><a class="waves-effect waves-light">Contact</a> </li>
+            <li><a class="waves-effect waves-light" href="gallery.html">Gallery</a> </li>
+            <li><a class="waves-effect waves-light" href="services.html">Services</a> </li>
+            <li><button href="#contact" id="download-button" class="btn-flat waves-effect liz-orange modal-trigger" >Contact</button> </li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
@@ -31,45 +29,5 @@
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
 </nav>
-<br/><br/><br/><br/>
-<div class="container">
-    <div class="row" id="images-container">
-
-    </div>
-</div>
-<script>
-    var images=[
-        {
-            url:'images/cathedral.jpg'
-        },
-        {
-            url:'images/beetle.jpg'
-        },
-        {
-            url:'images/cathedral.jpg'
-        },
-        {
-            url:'images/Rt.Rev.Dr.IsaacMarPhiloxenosEpiscopa.jpg'
-        },
-        {
-            url:'images/cathedral.jpg'
-        },
-    ]
-    var element=''
-    var r=images.forEach(function (image) {
-        element=element+'<div class="col m4"><img class="gallery-image materialboxed" width="650" src=\''+image.url+'\'/></div>'
-    })
-    console.log(element)
-    document.getElementById('images-container').innerHTML=element
-</script>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/materialize/dist/js/materialize.js"></script>
-<script>
-    $(document).ready(function(){
-        $(document).ready(function(){
-            $('.materialboxed').materialbox();
-        });
-    })
-</script>
 </body>
 </html>
