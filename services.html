@@ -43,7 +43,9 @@
                         <form id="privilege_form">
                             <input placeholder="Id No:" name="privilege_id" id="privilege_id" type="number" class="validate">
                             <input type="submit"/>
+                           
                         </form>
+                        <div id="result"></div>
                     </div>
             </div>
         </div>
@@ -52,12 +54,15 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/materialize/dist/js/materialize.js"></script>
 <script>
+    var result=''
     $('#privilege_form').submit(function (e) {
         e.preventDefault()
         $.ajax({
             url:'privilege.php?id='+$('#privilege_id').val(),
             success:function (data) {
                 console.log(data)
+                result=data+'<a href=\'edit.php?id='+$('#privilege_id').val()+'\'>Click Here to Edit Details</a>'
+                $('#result').html(result)
             },
             error:function (error) {
                 console.error(error)
