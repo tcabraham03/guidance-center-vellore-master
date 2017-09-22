@@ -35,3 +35,32 @@
 	border-radius: 30px 30px 30px 30px;
 	margin-left: 10px;
 }
+
+#map{
+	height: 400px;
+	width: 100%;
+}
+
+.home-description{
+	text-align: justify;
+}
+
+.collapsible-custom-body{
+	padding: 30px;
+	background: url("../images/cathedral.jpg");
+}
+
+.collapsible-custom-body div{
+	background: rgba(255,255,255,0.6);
+	color: black;
+	padding: 5px;
+	text-align: justify;
+}
+
+.collapsible-body .directors{
+	padding: 30px;
+}
+
+.director img{
+	width: 100%;
+}

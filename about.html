@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Vellore Guidance Center</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="bower_components/materialize/dist/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="styles/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+</head>
+<body>
+<nav class="soft-crust" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="images/logo.png"></a>
+        <ul class="right hide-on-med-and-down">
+            <!-- <li><a class="waves-effect waves-light btn modal-trigger liz-orange" href="#about">About us</a></li> -->
+            <li><a class="waves-effect waves-light" href="index.html">Home</a> </li>
+            <li><a class="waves-effect waves-light">About Us</a> </li>
+            <li><a class="waves-effect waves-light">Gallery</a> </li>
+            <li><a class="waves-effect waves-light">Services</a> </li>
+            <li><a class="waves-effect waves-light">Contact</a> </li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+            <!-- <li><a class="waves-effect waves-light btn modal-trigger liz-orange" href="#about">About us</a></li> -->
+            <!--TODO: Copy the above nav here for mobile support-->
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+<div class="container">
+    <br><br>
+    <h1>About Us</h1>
+    <ul class="collapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header active">History</div>
+            <div class="collapsible-body collapsible-custom-body">
+                <div>
+                    The initial steps towards starting a Guidance Home for those who come for treatment at CMC Hospital, Vellore, were made by following the great vision of Rev Chacko P. Jacob, then the vicar of St. Thomas Mar Thoma Church, Vellore. He received strong support from the then Madras-Calcutta Diocesan bishop Rt. Rev. Thomas Mar Timotheos Episcopa, who from his own experience at CMCH, when his father late Rev. K.N. George was brought for treatment, felt the need for materializing the vision. At that time Thirumeni found the genuine need for someone to guide the patients, who face a dilemma, not knowing where to go and whom to meet! And thus a home was started in a rented but limited facility to accommodate those who were in great need of guidance and support. The present building is named after our late Metropolitan Most Rev. Dr. Alexander Mar Thoma who stayed at the rented building amidst those limitations. His Grace urged the need for a place of our own to provide better accommodation and supported the initiative in various ways. As a result, the then Diocesan bishop Rt. Rev. Thomas Mar Timotheos Episcopa laid the foundation stone on 16th of March 2000. And within a span of one year, His Grace the Most Rev. Dr. Philipose Mar Chrysostom Mar Thoma Metropolitan dedicated the Guidance Home on 22nd of March 2001. Being instrumental in showing God’s love towards human kind, this project received nourishing support through the philanthropic assistance extended by the members of Malaysia-Singapore and Bangalore parishes. Currently, the Guidance Home is a pioneering project of the Chennai-Bangalore Diocese.
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Letter from Diocesan Episcopa</div>
+            <div class="collapsible-body">
+
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Board of Directors</div>
+            <div class="collapsible-body">
+                <div class="directors">
+                    <h5>List of Directors</h5>
+                    <div class="row">
+                        <div class="col s6 m4 director">
+                            <img src="images/HisGraceTheMetropolitan.jpg"/>
+                            Director 1
+                        </div>
+                        <div class="col s6 m4 director">
+                            <img src="images/Rt.Rev.Dr.IsaacMarPhiloxenosEpiscopa.jpg"/>
+                            Director 2
+                        </div>
+                        <div class="col s6 m4 director">
+                            <img src="images/Markarios_Thirumeni.jpg"/>
+                            Director 3
+                        </div>
+                        <div class="col s6 m4 director">Director 4</div>
+                        <div class="col s6 m4 director">Director 5</div>
+                        <div class="col s6 m4 director">Director 6</div>
+                        <div class="col s6 m4 director"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/materialize/dist/js/materialize.js"></script>
+<script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.collapsible').collapsible({
+            accordion:true,
+            onOpen:function (el){
+                console.log('Hello!')
+                $('.collapsible-body').resize()
+            },
+            onClose:function (el) {
+                console.log('Hello!')
+                $('.collapsible-body').resize()
+            }
+        })
+
+        $('.directors-carousel').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true,
+            arrows:true
+        });
+    })
+</script>
+</body>
+</html>
