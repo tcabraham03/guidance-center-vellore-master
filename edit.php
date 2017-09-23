@@ -17,7 +17,7 @@
         <!-- <li><a class="waves-effect waves-light btn modal-trigger liz-orange" href="#about">About us</a></li> -->
         <li><a class="waves-effect waves-light" href="index.html">Home</a> </li>
         <li><a class="waves-effect waves-light" href="about.html">About Us</a> </li>
-        <li><a class="waves-effect waves-light" href="gallery.html">Gallery</a> </li>
+        <li><a class="waves-effect waves-light" href="gallery.ht  ml">Gallery</a> </li>
         <li><a class="waves-effect waves-light" href="services.html">Services</a> </li>
         <li><a class="waves-effect waves-light" href="facilities.html">Facilities</a> </li>
         <li><button href="#contact" id="download-button" class="btn-flat waves-effect liz-orange modal-trigger" >Contact</button> </li>
@@ -37,7 +37,7 @@
 
   $servername = "localhost";
   $username = "root";
-  $password = " ";
+  $password = "pwd4MySQL";
   $dbname = "privilege_card_members";
   $message=$_GET['message'];
 
@@ -70,26 +70,28 @@
         <div class="input-field">
           <?php
               echo "<textarea name='address' id='address' class='materialize-textarea'>".$row['address']."</textarea>";
-          }
           ?>
           <label for="address" class="active">Address</label>
         </div>
         <div class="input-field">
-            <input type="text" id="home_parish" name="home_parish" placeholder="Home Parish"/>
+            <input type="text" id="home_parish" name="home_parish" placeholder="Home Parish" value="<?php echo $row['home_parish']?>"/>
             <label for="home_parish" class="active">Home Parish</label>
         </div>
         <div class="input-field">
-            <input type="text" id="present_parish" name="present_parish" placeholder="Present Parish"/>
+            <input type="text" id="present_parish" name="present_parish" placeholder="Present Parish" value="<?php echo $row['present_parish']?>"/>
             <label for="present_parish" class="active">Present Parish</label>
         </div>
         <div class="input-field">
-            <input type="tel" id="phone" name="phone" placeholder="Phone Number"/>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" value="<?php echo $row['phone']?>"/>
             <label for="phone" class="active">Phone Number</label>
         </div>
         <div class="input-field">
-            <input type="email" id="email" name="email" placeholder="Email"/>
+            <input type="email" id="email" name="email" placeholder="Email" value="<?php echo $row['email']?>"/>
             <label for="email" class="active">Email</label>
         </div>
+        <?php
+      }
+        ?>
         <div class="input-field">
             <input type="submit" value="Submit" class="btn col s12"/>
         </div>
