@@ -1,6 +1,9 @@
 .facility{
-  width: 100%;
+  margin-left:0px !important;
+  margin-right:0px !important;
+  margin-bottom: 0px;
 }
-.facility img{
-  width: 400px;
+
+.facility .collapsible-body{
+  
 }
