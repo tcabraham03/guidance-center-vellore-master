@@ -3,7 +3,7 @@ $id=$_GET['id'];
 
 $servername = "localhost";
 $username = "root";
-$password = "pwd4MySQL";
+$password = "";
 $dbname = "privilege_card_members";
 
 // Create connection

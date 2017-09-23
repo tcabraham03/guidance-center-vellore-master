@@ -9,7 +9,7 @@
 
   $servername = "localhost";
   $username = "root";
-  $password = "pwd4MySQL";
+  $password = "";
   $dbname = "privilege_card_members";
 
   // Create connection
@@ -19,7 +19,7 @@
       die("Connection failed: " . $conn->connect_error);
   }
 
-  $sql="UPDATE `members` SET `home_parish` = '$home_parish', `present_parish` = '$present_parish', `phone` = $phone, `email` = '$email' WHERE `members`.`regno` = $id AND `members`.`name` = '$name';";
+  $sql="UPDATE `members` SET `address`='$address',`home_parish` = '$home_parish', `present_parish` = '$present_parish', `phone` = $phone, `email` = '$email' WHERE `members`.`regno` = $id AND `members`.`name` = '$name';";
   if($conn->query($sql)===TRUE){
     Redirect('edit.php?message=Success');
   }

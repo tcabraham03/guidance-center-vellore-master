@@ -37,7 +37,7 @@
 
   $servername = "localhost";
   $username = "root";
-  $password = "pwd4MySQL";
+  $password = " ";
   $dbname = "privilege_card_members";
   $message=$_GET['message'];
 
