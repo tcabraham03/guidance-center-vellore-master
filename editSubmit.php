@@ -19,5 +19,17 @@
       die("Connection failed: " . $conn->connect_error);
   }
 
-  $sql="UPDATE `members` SET `home_parish` = $home_parish, `present_parish` = $present_parish, `phone` = $phone, `email` = $email WHERE `members`.`regno` = $id AND `members`.`name` = $name";
+  $sql="UPDATE `members` SET `home_parish` = '$home_parish', `present_parish` = '$present_parish', `phone` = $phone, `email` = '$email' WHERE `members`.`regno` = $id AND `members`.`name` = '$name';";
+  if($conn->query($sql)===TRUE){
+    Redirect('edit.php?message=Success');
+  }
+  else{
+    Redirect('edit.php?message=Error');
+    echo 'Error';
+  }
+
+  function Redirect($url, $permanent = false){
+    header('Location: ' . $url, true, $permanent ? 301 : 302);
+    exit();
+  }
 ?>

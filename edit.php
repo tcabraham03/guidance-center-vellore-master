@@ -33,14 +33,17 @@
   <br/><br/><br/><br/>
   <div class="container">
 <?php
-
   $id=$_GET['id'];
 
   $servername = "localhost";
   $username = "root";
   $password = "pwd4MySQL";
   $dbname = "privilege_card_members";
+  $message=$_GET['message'];
 
+    if($message){
+      echo '<h1>'.$message.'!</h1>';
+    }
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
   // Check connection
@@ -58,7 +61,7 @@
         <div class="input-field">
           <?php
             while($row = $detail_result->fetch_assoc()) {
-              echo "<input style='display:none;' value=".$row['regno']."/>";
+              echo "<input style='display:none;' value=".$row['regno']." name='id'/>";
               echo "<input disabled type='text' id='name'  placeholder='Name' value='".$row['name']."'/>";
               echo "<input style='display:none;' type='text' name='name' value='".$row['name']."'/>";
           ?>
