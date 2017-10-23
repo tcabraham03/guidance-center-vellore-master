@@ -64,7 +64,7 @@
       <div class="section">
 
       <!--   Icon Section   -->
-      <div class="carousel carousel-slider center" data-indicators="true" style="height: 400px;">
+      <div class="carousel carousel-slider center" data-indicators="true">
         <div class="carousel-item red white-text" style="top: 0px; height: 100%;">
           <h2>First</h2>
         </div>
@@ -180,8 +180,7 @@
   $(document).ready(function(){
     $('ul.tabs').tabs();
     $('.modal-trigger').leanModal();
-    $('.carousel.carousel-slider').carousel({fullWidth: true})
-    $('.carousel-item').css('transform', 'translateX(0px) translateY(0px) translateX(0px) translateX(0px) translateZ(0px) !important')
+    $('.carousel-slider').carousel()
   });
   </script>
 
