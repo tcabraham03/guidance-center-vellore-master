@@ -12,13 +12,14 @@
 </head>
 <body>
   <nav class="soft-crust" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="images/logo.png"></a>
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="images/logo.png"></a>
       <ul class="right hide-on-med-and-down">
         <!-- <li><a class="waves-effect waves-light btn modal-trigger liz-orange" href="#about">About us</a></li> -->
         <li><a class="waves-effect waves-light" href="index.html">Home</a> </li>
         <li><a class="waves-effect waves-light" href="about.html">About Us</a> </li>
         <li><a class="waves-effect waves-light" href="gallery.html">Gallery</a> </li>
         <li><a class="waves-effect waves-light" href="services.html">Services</a> </li>
+        <li><a class="waves-effect waves-light" href="testimonials.php">Testimonials</a></li>
         <li><button href="#contact" id="download-button" class="btn-flat waves-effect liz-orange modal-trigger" >Contact</button> </li>
       </ul>
 
