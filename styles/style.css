@@ -90,3 +90,8 @@
 .submit-testimony-button{
 	margin:50px;
 }
+
+.carousel-item{
+	transform: translateX(0px) translateY(0px) translateX(0px) translateX(0px) translateZ(0px) !important;
+	top:0px !important;
+}

@@ -13,13 +13,8 @@
 </head>
 <body>
   <nav class="soft-crust" role="navigation">
-<<<<<<< HEAD
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="images/logo.png"></a>
-      <ul class="right hide-on-med-and-down"> 
-=======
     <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="images/logo.png"></a>
       <ul class="right hide-on-med-and-down">
->>>>>>> 4682d73a481987245283576b0a87e0596fdc6e55
         <!-- <li><a class="waves-effect waves-light btn modal-trigger liz-orange" href="#about">About us</a></li> -->
         <li><a class="waves-effect waves-light" href="index.html">Home</a> </li>
         <li><a class="waves-effect waves-light" href="about.html">About Us</a> </li>
@@ -69,6 +64,15 @@
       <div class="section">
 
       <!--   Icon Section   -->
+      <div class="carousel carousel-slider center" data-indicators="true" style="height: 400px;">
+        <div class="carousel-item red white-text" style="top: 0px; height: 100%;">
+          <h2>First</h2>
+        </div>
+        <div class="carousel-item amber white-text" style="top: 0px; height: 100%;">
+          <h2>Second</h2>
+        </div>
+      </div>
+
       <div class="row">
         <div class="row">
           <div class="col s12">
@@ -176,28 +180,14 @@
   $(document).ready(function(){
     $('ul.tabs').tabs();
     $('.modal-trigger').leanModal();
+    $('.carousel.carousel-slider').carousel({fullWidth: true})
+    $('.carousel-item').css('transform', 'translateX(0px) translateY(0px) translateX(0px) translateX(0px) translateZ(0px) !important')
   });
   </script>
 
   <script async defer
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyXB51Uk_eQqK7uxtHzK-0RZe9hdTcNiU&callback=initMap">
   </script>
-  <!--Google Maps-->
-  <script>
-      function initMap() {
-          var vellore = {lat: 12.926660, lng: 79.128567};
-          var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 10,
-              center: vellore
-          });
-          var marker = new google.maps.Marker({
-              position: vellore,
-              map: map
-          });
-      }
-      function initGandhiMap(){
 
-      }
-  </script>
   </body>
 </html>
