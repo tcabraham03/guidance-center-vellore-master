@@ -9,12 +9,20 @@
 	color: #94D0E7;
 }
 
+.custom-bodycontent{
+	font-size: 17px
+}
+
 .custom-header{
 	font-size: 36px;
 }
 
 .custom-sub-header{
 	font-size: 20px;
+}
+
+.custom-subsub-header{
+	font-size: 25px;
 }
 
 .liz-orange-text{
