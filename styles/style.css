@@ -36,7 +36,10 @@
 .brand-logo img{
 	width: 100px;
 }
-
+.icon img{
+	float: left;
+	width: 25px;	
+}
 .custom-badge{
 	color: #fff;
 	padding: 5px;

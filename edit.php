@@ -30,6 +30,18 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="custom-header center liz-orange-text"> Mar Thoma Fellowship And Guidance Home, Vellore</h1>
+      <h6 class="custom-subsub-header center liz-orange-text"> Chennai - Banglore Diocese</h6>
+      <h6 class="custom-subsub-header center liz-orange-text"> Mar Thoma Syrian Church of Malabar </h6>
+      <div class="row center">
+        <h5 class="custom-sub-header col s12 light">"A home away from home when you are at CMC Vellore and you need any help"</h5>
+      </div>
+    </div>
+  </div>
+  <hr style="width:65%; border:1px solid rgb(255, 115, 0);"/>
   <br/><br/><br/><br/>
   <div class="container">
 <?php
@@ -102,5 +114,38 @@
 ?>
 
   </div>
+  <footer class="liz-orange page-footer ">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text"><img src="images/icon_destination.png" width="30" height="30"> Address</h5>
+          <h6 class="white-text">Mar Thoma New Guidance Home,<br/>Old Bypass Rd, Behind New Fish Market,<br/>Thottapalayam, Vellore Fort P.O,<br/>Vellore, Tamil Nadu 632-004<br/>India<br/><br/></h6>
+           <ul>
+            <li><div class="icon white-text"><img src="images/icon_telephone.png"/> 0416 - 2220542</div></li>
+            <li><div class="icon white-text"><img src="images/icon_mobile.png"/> +919445410542</div></li>
+            <li><div class="icon white-text"><img src="images/icon_email.png"/> mtguidancehome@gmail.com</div></li>
+           </ul>
+          <p class="grey-text text-lighten-4"></p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="white-text" href="sitemap.html">Site Map</a></li>
+            <li><a class="white-text" href="https://www.facebook.com/Dr-Alexander-Mar-Thoma-Memorial-Fellowship-and-Guidance-Home-345380575539622/">Facebook Page</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Support Us</h5>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-1" href="http://www.mtguidancehomevellore.in">© 2017 MTC Guidance Home, Vellore. </a> All Rights Reserved®
+      </div>
+    </div>
+  </footer>
+
+
 </body>
 </html>
