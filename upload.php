@@ -59,58 +59,69 @@
           <div class="modal-footer">
             <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Submit</a>
           </div>
-        </div>
-     <div class="container">
-      <div class="section">
-      <!-- Slick Carousel will come up here -->
-      <div class="centers-slider">
-        <div>
-          <div id="test1" class="col s12">
-            <br>
-            <h6 class="custom-sub-header center liz-orange-text"> Dr. Alexander Mar Thoma Memorial Fellowship and Guidance home, Gandhi Nagar </h6>
-            <div class="row">
+		</div>
+		<div class="container">		
+			<?php
+			//turn on php error reporting
+			error_reporting(E_ALL);
+			ini_set('display_errors', 1);
 
-              <div class="card col s12">
-                <div class="card-image">
-                  <img src="images/cathedral.jpg" class="">
-                </div>
-                <div class="card-content home-description custom-bodycontent">
-                  The Guidance Home at Vellore extends services to the sick and the needy, irrespective of caste, religion and class. The Home functions as a haven of hope for the patients and their relatives coming to seek medical assistance from the Christian Medical College Hospital, Vellore. It is our mission and vision to help the people who are in distress, agony and loneliness. The Mar Thoma Sabha Council has welcomed this project and has decided to name this Home in memory of our Late Most Rev. Dr. Alexander Mar Thoma Valiya Metropolitan. We started the Guidance Centre with this vision.
-                  <br/>
-                  <div class="row center">
-                    <h2 class="custom-sub-header col s12 light">"I will never leave you nor forsake you"</h2>
-                    <h6 class="custom-sub-header col s12 light">- Hebrews 13:5</h6>  
-                  </div>
-                  
-                  <br/>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2488220978667!2d79.13968871684672!3d12.955923646246633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad476514836029%3A0x2b1672acf8d385bf!2sMar+Thoma+Fellowship+and+Guidance+Home!5e0!3m2!1sen!2sin!4v1506138548892" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
+			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+				
+				$name     = $_FILES['file']['name'];
+				$tmpName  = $_FILES['file']['tmp_name'];
+				$error    = $_FILES['file']['error'];
+				$size     = $_FILES['file']['size'];
+				$ext	  = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+			
+				switch ($error) {
+					case UPLOAD_ERR_OK:
+						$valid = true;
+						//validate file extensions
+						if ( !in_array($ext, array('jpg','jpeg','png','gif')) ) {
+							$valid = false;
+							$response = 'Invalid file extension.';
+						}
+						//validate file size
+						if ( $size/1024/1024 > 2 ) {
+							$valid = false;
+							$response = 'File size is exceeding maximum allowed size.';
+						}
+						//upload file
+						if ($valid) {
+							$targetPath =  dirname( __FILE__ ) . DIRECTORY_SEPARATOR. 'gallery' . DIRECTORY_SEPARATOR. $name;
+							move_uploaded_file($tmpName,$targetPath); 
+							header( 'Location: gallery_upload.php' ) ;
+							exit;
+						}
+						break;
+					case UPLOAD_ERR_INI_SIZE:
+						$response = 'The uploaded file exceeds the upload_max_filesize directive in php.ini.';
+						break;
+					case UPLOAD_ERR_PARTIAL:
+						$response = 'The uploaded file was only partially uploaded.';
+						break;
+					case UPLOAD_ERR_NO_FILE:
+						$response = 'No file was uploaded.';
+						break;
+					case UPLOAD_ERR_NO_TMP_DIR:
+						$response = 'Missing a temporary folder. Introduced in PHP 4.3.10 and PHP 5.0.3.';
+						break;
+					case UPLOAD_ERR_CANT_WRITE:
+						$response = 'Failed to write file to disk. Introduced in PHP 5.1.0.';
+						break;
+					default:
+						$response = 'Unknown error';
+					break;
+				}
 
-          </div>
-        </div>
-        <div>
-          <div id="test2" class="col s12">
-            <br>
-            <h6 class="custom-sub-header center liz-orange-text"> Santhi Sadanam, Vellore <span class="custom-badge liz-orange">New</span></h6>
-            <div class="card col s12">
-              <div class="card-image">
-                <img src="images/beetle.jpg" class="">
-              </div>
-              <div class="card-content home-description">
-                The Guidance Home at Vellore extends services to the sick and the needy, irrespective of caste, religion and class. The Home functions as a haven of hope for the patients and their relatives coming to seek medical assistance from the Christian Medical College Hospital, Vellore. It is our mission and vision to help the people who are in distress, agony and loneliness. The Mar Thoma Sabha Council has welcomed this project and has decided to name this Home in memory of our Late Most Rev. Dr. Alexander Mar Thoma Valiya Metropolitan. We started the Guidance Centre with this vision.
-                <br/><br/><br/>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31107.780926079424!2d79.11719453639171!3d12.941581463159626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad38bebfa157c5%3A0x1be213cf79036afa!2sMar+Thoma+New+Guidance+Home%2C+Vellore!5e0!3m2!1sen!2sin!4v1506138894135" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+				echo $response."<a href=gallery_upload.php>Click here</a>";
+			}
+			?>
+		</div>
 
-  <footer class="liz-orange page-footer ">
+
+<footer class="liz-orange page-footer ">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -148,17 +159,6 @@
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/materialize/dist/js/materialize.js"></script>
   <script src="bower_components/slick-carousel/slick/slick.js"></script>
-  <!-- <script src="js/init.js"></script> -->
-  
-  <script type="text/javascript">
-      $(document).ready(function(){
-          $('.centers-slider').slick({
-              arrows:true
-          })
-          $('ul.tabs').tabs()
-          $('.modal-trigger').leanModal()
-          $('.carousel.carousel-slider').carousel({fullWidth: true})
-      });
-  </script>
+
   </body>
 </html>
