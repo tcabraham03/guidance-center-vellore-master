@@ -20,14 +20,12 @@
 
   <body>
     <nav class="soft-crust" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="images/logo.png"></a>
+        <div class="nav-wrapper container"><a id="logo-container" href="home.html" class="brand-logo"><img src="images/logo.png"></a>
             <ul class="right hide-on-med-and-down">
                 <!-- <li><a class="waves-effect waves-light btn modal-trigger liz-orange" href="#about">About us</a></li> -->
-                <li><a class="waves-effect waves-light" href="index.html">Home</a> </li>
-                <li><a class="waves-effect waves-light" href="about.html">About Us</a> </li>
-                <li><a class="waves-effect waves-light" href="gallery.html">Gallery</a> </li>
-                <li><a class="waves-effect waves-light" href="services.html">Services</a> </li>
-                <li><a class="waves-effect waves-light" href="testimonials.php">Testimonials</a></li>
+                <li><a class="waves-effect waves-light" href="home.html">Home</a> </li>
+                <li><a class="waves-effect waves-light" href="gallery_upload.php">Gallery</a> </li>
+                <li><a class="waves-effect waves-light" href="">Control center</a> </li>
                 <li><button href="#contact" id="download-button" class="btn-flat waves-effect liz-orange modal-trigger" >Contact</button> </li>
             </ul>
 
@@ -106,7 +104,57 @@
 				</form>
 			</div>
 	      </div>
-    </div> <!-- /container -->
+    </div>
 
+
+    <footer class="liz-orange page-footer ">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text"><img src="images/icon_destination.png" width="30" height="30"> Address</h5>
+          <h6 class="white-text">Mar Thoma New Guidance Home,<br/>Old Bypass Rd, Behind New Fish Market,<br/>Thottapalayam, Vellore Fort P.O,<br/>Vellore, Tamil Nadu 632-004<br/>India<br/><br/></h6>
+           <ul>
+            <li><div class="icon white-text"><img src="images/icon_telephone.png"/> 0416 - 2220542</div></li>
+            <li><div class="icon white-text"><img src="images/icon_mobile.png"/> +919445410542</div></li>
+            <li><div class="icon white-text"><img src="images/icon_email.png"/> mtguidancehome@gmail.com</div></li>
+           </ul>
+          <p class="grey-text text-lighten-4"></p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="white-text" href="sitemap.html">Site Map</a></li>
+            <li><a class="white-text" href="https://www.facebook.com/Dr-Alexander-Mar-Thoma-Memorial-Fellowship-and-Guidance-Home-345380575539622/">Facebook Page</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Support Us</h5>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-1" href="http://www.mtguidancehomevellore.in">© 2017 MTC Guidance Home, Vellore. </a> All Rights Reserved®
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/materialize/dist/js/materialize.js"></script>
+  <script src="bower_components/slick-carousel/slick/slick.js"></script>
+  <!-- <script src="js/init.js"></script> -->
+  
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $('.centers-slider').slick({
+              arrows:true
+          })
+          $('ul.tabs').tabs()
+          $('.modal-trigger').leanModal()
+          $('.carousel.carousel-slider').carousel({fullWidth: true})
+      });
+  </script>
   </body>
 </html>
