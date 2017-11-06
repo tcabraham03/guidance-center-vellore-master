@@ -17,8 +17,39 @@
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css"/>
     <link href="styles/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
-  
-  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+
+    <style type="text/css">
+
+body
+{
+ background:#fff;
+}
+img
+{
+ width:auto;
+ box-shadow:0px 0px 20px #cecece;
+ -moz-transform: scale(0.7);
+ -moz-transition-duration: 0.6s; 
+ -webkit-transition-duration: 0.6s;
+ -webkit-transform: scale(0.7);
+ 
+ -ms-transform: scale(0.7);
+ -ms-transition-duration: 0.6s; 
+}
+img:hover
+{
+  box-shadow: 20px 20px 20px #dcdcdc;
+ -moz-transform: scale(0.8);
+ -moz-transition-duration: 0.6s;
+ -webkit-transition-duration: 0.6s;
+ -webkit-transform: scale(0.8);
+ 
+ -ms-transform: scale(0.8);
+ -ms-transition-duration: 0.6s;
+ 
+}
+</style>
   </head>
 
   <body>
@@ -85,7 +116,6 @@
 				  <div class="form-group">
 				    <label for="file">Select a file to upload</label>
 				    <input type="file" name="file">
-				    <p class="help-block">Only jpg,jpeg,png and gif file with maximum size of 1 MB is allowed.</p>
 				  </div>
 				  <input type="submit" class="btn btn-lg btn-primary" value="Upload">
 				</form>
