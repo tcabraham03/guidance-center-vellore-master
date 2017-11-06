@@ -67,8 +67,8 @@
         <?php
 
           $servername = "localhost";
-          $username = "root";
-          $password = "";
+          $username = "vmtcguidance";
+          $password = "abcd12345";
           $dbname = "velloremtcguidance";
           // Create connection
           $conn = new mysqli($servername, $username, $password, $dbname);

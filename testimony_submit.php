@@ -1,8 +1,8 @@
 <?php
   $servername = "localhost";
-  $username = "root";
-  $password = "pwd4MySQL";
-  $dbname = "privilege_card_members";
+  $username = "vmtcguidance";
+  $password = "abcd12345";
+  $dbname = "velloremtcguidance";
   $name=$_GET['name'];
   $message=$_GET['message'];
   // Create connection

@@ -4,8 +4,8 @@
   
 
   $servername = "localhost";
-  $username = "root";
-  $password = "";
+  $username = "vmtcguidance";
+  $password = "abcd12345";
   $dbname = "velloremtcguidance";
 
   // Create connection
