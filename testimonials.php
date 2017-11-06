@@ -8,6 +8,7 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="bower_components/materialize/dist/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
   <link href="styles/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
   <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
