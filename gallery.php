@@ -47,17 +47,17 @@
             </div>
       </div>
 <hr style="width:65%; border:1px solid rgb(255, 115, 0);"/>
-        
+
 
 <div class="container">
              <div class="row" id="images-container">
-                 <?php 
+                 <?php
                          //scan "uploads" folder and display them accordingly
                      $folder = "gallery";
                      $results = scandir('gallery');
                      foreach ($results as $result) {
                          if ($result === '.' or $result === '..') continue;
-                     
+
                          if (is_file($folder . '/' . $result)) {
                              echo '
                              <div class="col-md-3">
@@ -69,7 +69,7 @@
                      }
                  ?>
              </div>
-         </div>	
+         </div>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/materialize/dist/js/materialize.js"></script>
 
@@ -89,11 +89,23 @@
             <div class="col l6 s12">
               <h5 class="white-text"><img src="images/icon_destination.png" width="30" height="30"> Address</h5>
               <h6 class="white-text">Mar Thoma New Guidance Home,<br/>Old Bypass Rd, Behind New Fish Market,<br/>Thottapalayam, Vellore Fort P.O,<br/>Vellore, Tamil Nadu 632-004<br/>India<br/><br/></h6>
-               <ul>
-                <li><div class="icon white-text"><img src="images/icon_telephone.png"/> 0416 - 2220542</div></li>
-                <li><div class="icon white-text"><img src="images/icon_mobile.png"/> +919445410542</div></li>
-                <li><div class="icon white-text"><img src="images/icon_email.png"/> mtguidancehome@gmail.com</div></li>
-               </ul>
+              <ul>
+               <li>
+                 <div class="icon white-text">
+                   <i class="fa fa-phone black-text" style="font-size:24px; width:28px; text-align:center;"></i> 0416 - 2220542
+                 </div>
+               </li>
+               <li>
+                 <div class="icon white-text">
+                   <i class="fa fa-mobile black-text" style="font-size:30px; width:28px; text-align:center;"></i> +919445410542
+                 </div>
+               </li>
+               <li>
+                 <div class="icon white-text">
+                   <i class="fa fa-envelope black-text" style="font-size:24px; width:28px; text-align:center;"></i> mtguidancehome@gmail.com
+                 </div>
+               </li>
+              </ul>
               <p class="grey-text text-lighten-4"></p>
             </div>
             <div class="col l3 s12">
@@ -114,6 +126,6 @@
           </div>
         </div>
       </footer>
-    
+
 </body>
 </html>
