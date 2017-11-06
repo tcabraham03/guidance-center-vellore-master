@@ -3,8 +3,8 @@ $id=$_GET['id'];
 
 $servername = "localhost";
 $username = "root";
-$password = "pwd4MySQL";
-$dbname = "privilege_card_members";
+$password = "";
+$dbname = "velloremtcguidance";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
