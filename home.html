@@ -12,6 +12,8 @@
   <link href="bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
   <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
   <link href="styles/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  
 </head>
 <body>
   <nav class="soft-crust" role="navigation">
@@ -21,8 +23,7 @@
         <li><a class="waves-effect waves-light" href="home.html">Home</a> </li>
         <li><a class="waves-effect waves-light" href="gallery_upload.php">Gallery</a> </li>
         <li><a class="waves-effect waves-light" href="">Control Center</a> </li>
-        <li><button href="#contact" id="download-button" class="btn-flat waves-effect liz-orange modal-trigger" >Contact</button> </li>
-      </ul>
+        <li><a class="waves-effect waves-light" href="logout.php">Logout</a> </li>
 
       <ul id="nav-mobile" class="side-nav">
         <!-- <li><a class="waves-effect waves-light btn modal-trigger liz-orange" href="#about">About us</a></li> -->
@@ -43,21 +44,7 @@
     </div>
   </div>
   <hr style="width:65%; border:1px solid rgb(255, 115, 0);"/>
-      <!-- Modal Structure -->
-        <div id="contact" class="modal">
-          <div class="modal-content">
-            <h4>Contact</h4>
-            <form>
-              <input type="text" name="name" placeholder="Name" class="col s12">
-              <input type="text" name="email" placeholder="Email" class="col s12">
-              <input type="text" name="phno" placeholder="Phone No/Mobile" class="col s12">
-              <textarea class="col s12" placeholder="Type your message here"></textarea>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Submit</a>
-          </div>
-        </div>
+      
      <div class="container">
       <div class="section">
       <!-- Slick Carousel will come up here -->
@@ -114,11 +101,23 @@
         <div class="col l6 s12">
           <h5 class="white-text"><img src="images/icon_destination.png" width="30" height="30"> Address</h5>
           <h6 class="white-text">Mar Thoma New Guidance Home,<br/>Old Bypass Rd, Behind New Fish Market,<br/>Thottapalayam, Vellore Fort P.O,<br/>Vellore, Tamil Nadu 632-004<br/>India<br/><br/></h6>
-           <ul>
-            <li><div class="icon white-text"><img src="images/icon_telephone.png"/> 0416 - 2220542</div></li>
-            <li><div class="icon white-text"><img src="images/icon_mobile.png"/> +919445410542</div></li>
-            <li><div class="icon white-text"><img src="images/icon_email.png"/> mtguidancehome@gmail.com</div></li>
-           </ul>
+          <ul>
+              <li>
+                <div class="icon white-text">
+                  <i class="fa fa-phone black-text" style="font-size:20px; width:28px; text-align:center;"></i> 0416 - 2220542
+                </div>
+              </li>
+              <li>
+                <div class="icon white-text">
+                  <i class="fa fa-mobile black-text" style="font-size:20px; width:28px; text-align:center;"></i> +919445410542
+                </div>
+              </li>
+              <li>
+                <div class="icon white-text">
+                  <i class="fa fa-envelope black-text" style="font-size:20px; width:28px; text-align:center;"></i> mtguidancehome@gmail.com
+                </div>
+              </li>
+             </ul>
           <p class="grey-text text-lighten-4"></p>
         </div>
         <div class="col l3 s12">
