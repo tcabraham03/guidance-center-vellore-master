@@ -62,7 +62,7 @@
                              echo '
                              <div class="col-md-3">
                                  <div class="thumbnail">
-                                     <img src="'.$folder . '/' . $result.'" alt="...">
+                                     <img class="gallery-image materialboxed" width="650" src="'.$folder . '/' . $result.'" alt="...">
                                  </div>
                              </div>';
                          }
